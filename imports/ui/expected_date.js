@@ -1,8 +1,8 @@
 import { Template } from 'meteor/templating';
 
-import { Tasks } from '../api/tasks.js';
+import { Tasks } from '../api/dates.js';
 
-import './task.html';
+import './expected_date.html';
 
 Template.task.events({
     'click .toggle-checked'() {
