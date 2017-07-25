@@ -2,7 +2,7 @@ import { Template } from 'meteor/templating';
 
 import { Dates } from '../api/dates.js';
 
-import './expected_date.html';
+import './e_date.js';
 import './body.html';
 
 
@@ -17,6 +17,9 @@ Template.body.onRendered(() => {
 });
 
 Template.body.events({
+    'click ._submit'(event) {
+        $(event.target).closest('FORM').trigger('submit');
+    },
     'submit .new-exp-date'(event) {
         // Prevent default browser form submit
         event.preventDefault();
@@ -24,18 +27,36 @@ Template.body.events({
         // Get value from form element
         const target = event.target;
         const date = $(target).find('#date').val();
+        const time = $(target).find('#time').val();
+        const description = $(target).find('#description').val();
 
-        console.log(date);
+        if (date && time && description) {
 
-        /*Tasks.insert({
-            text,
-            createdAt: new Date(), // current time
-        });*/
+            Dates.insert({
+                date: moment.utc(moment(new Date(date)).format('YYYY-MM-DD') + ' ' + moment(time, 'hh:mmPM').format('hh:mm:ss')).valueOf(),
+                description,
+                userId: getUserId(),
+                createdAt: new Date(), // current time
+            });
 
-        // Clear form
-        $(target).find('#date').val('');
+
+            $(target)[0].reset();
+            $(target).find('LABEL').removeClass('active');
+        }
     }
 });
+
+setUserId = () => {
+    if (!localStorage.getItem('userId')) {
+        localStorage.setItem('userId', Math.random().toString(36).slice(-14));
+    }
+
+    return localStorage.getItem('userId');
+};
+
+getUserId = () => {
+    return (localStorage.getItem('userId')) || setUserId();
+};
 
 initDateTimePickers = () => {
     $('._datepicker').pickadate({
@@ -47,5 +68,7 @@ initDateTimePickers = () => {
         closeOnSelect: false // Close upon selecting a date,
     });
 
-    $('._timepicker').clockpicker();
+    $('._timepicker').clockpicker({
+        twelvehour: true
+    });
 };

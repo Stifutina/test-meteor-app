@@ -1,30 +1,39 @@
 <body>
 <nav class="blue accent-1 row">
-    <div class="nav-wrapper col s12"><a href="/" class="brand-logo"><i class="large material-icons">hourglass_full</i>Time counter</a></div>
+    <div class="nav-wrapper col s12">
+        <a href="/" class="brand-logo">
+            <i class="material-icons">hourglass_full</i>Time counter
+        </a>
+    </div>
 </nav>
     <div class="row">
-        <div class="col s10 m3 l2 offset-s1 offset-m1 offset-l1">
-
+        <div class="col s10 m3 l3 offset-s1 offset-m1 offset-l1">
+            Clock
         </div>
-        <div class="col s10 offset-s1 m7 offset-m0 l8 offset-l0">
-            <form class="new-exp-date">
-                <div class="input-field col s4">
-                    <input id="date" type="text" class="date _datepicker">
-                    <label for="date" class="darken-3">Select expected date</label>
-                </div>
-                <div class="input-field col s4">
-                    <input id="time" type="text" class="time _timepicker">
-                    <label for="time" class="darken-3">Select expected time</label>
-                </div>
-                <div class="input-field col s4">
-                    <input id="description" class="description" type="text">
-                    <label for="description" class="darken-3">What should happen?</label>
-                </div>
-            </form>
+        <div class="col s10 offset-s1 m7 offset-m0 l7 offset-l0">
+            <div class="row">
+                <form class="new-exp-date">
+                    <div class="input-field col s3">
+                        <input id="date" type="text" class="date _datepicker">
+                        <label for="date" class="darken-3">Select expected date</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="time" type="text" class="time _timepicker">
+                        <label for="time" class="darken-3">Select expected time</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="description" class="description" type="text">
+                        <label for="description" class="darken-3">What should happen?</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <button class="waves-effect waves-light btn-large light-green _submit">WAIT FOR</button>
+                    </div>
+                </form>
+            </div>
 
-            <div class="counters_list">
+            <div class="row counters_list">
                 {{#each dates}}
-                    {{> date}}
+                    <div>{{>date}}</div>
                 {{/each}}
             </div>
         </div>

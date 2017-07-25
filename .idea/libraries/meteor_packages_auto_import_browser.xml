@@ -8,7 +8,6 @@
         <item url="file://$USER_HOME$/.meteor/packages/caching-compiler/1.1.9/web.browser/caching-compiler.js" />
         <item url="file://$USER_HOME$/.meteor/packages/observe-sequence/1.0.16/web.browser/observe_sequence.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ordered-dict/1.0.9/web.browser/ordered_dict.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/settlin_materialize/1.0.1/web.browser/dist/js/materialize.js" />
         <item url="file://$USER_HOME$/.meteor/packages/promise/0.8.9/web.browser/server.js" />
         <item url="file://$USER_HOME$/.meteor/packages/promise/0.8.9/web.browser/common.js" />
         <item url="file://$USER_HOME$/.meteor/packages/promise/0.8.9/web.browser/promise-tests.js" />
@@ -163,7 +162,6 @@
       <root url="file://$USER_HOME$/.meteor/packages/caching-compiler/1.1.9/web.browser/caching-compiler.js" />
       <root url="file://$USER_HOME$/.meteor/packages/observe-sequence/1.0.16/web.browser/observe_sequence.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ordered-dict/1.0.9/web.browser/ordered_dict.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/settlin_materialize/1.0.1/web.browser/dist/js/materialize.js" />
       <root url="file://$USER_HOME$/.meteor/packages/promise/0.8.9/web.browser/server.js" />
       <root url="file://$USER_HOME$/.meteor/packages/promise/0.8.9/web.browser/common.js" />
       <root url="file://$USER_HOME$/.meteor/packages/promise/0.8.9/web.browser/promise-tests.js" />

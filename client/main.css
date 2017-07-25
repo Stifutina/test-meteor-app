@@ -1,0 +1,12 @@
+nav i.material-icons {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+.counters_list {
+    margin-top: 50px;
+}
+.counterInfo {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
