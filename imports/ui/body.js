@@ -20,6 +20,7 @@ Template.body.events({
     'click ._submit'(event) {
         $(event.target).closest('FORM').trigger('submit');
     },
+    
     'submit .new-exp-date'(event) {
         event.preventDefault();
 
