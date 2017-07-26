@@ -21,7 +21,6 @@ Template.body.events({
         $(event.target).closest('FORM').trigger('submit');
     },
     'submit .new-exp-date'(event) {
-        // Prevent default browser form submit
         event.preventDefault();
 
         // Get value from form element
