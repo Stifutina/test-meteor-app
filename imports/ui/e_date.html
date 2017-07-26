@@ -1,10 +1,9 @@
 <template name="date">
     <div class="row counterInfo">
         <div class="col s12">
-            <span>{{date}}</span>
-            <span>{{time}}</span>
-            <span>{{description}}</span>
+            <span>Expected date : {{prettyDate}}</span> - <span>{{description}}</span>
 
+            <h5>{{secondsLeft}} left</h5>
             <button class="btn waves-effect waves-light red right stop_counter-js">STOP WAITING
                 <i class="material-icons right">alarm_off</i>
             </button>

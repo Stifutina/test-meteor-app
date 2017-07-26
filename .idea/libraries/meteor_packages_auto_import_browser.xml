@@ -62,9 +62,13 @@
         <item url="file://$USER_HOME$/.meteor/packages/random/1.0.10/web.browser/random.js" />
         <item url="file://$USER_HOME$/.meteor/packages/reactive-var/1.0.11/web.browser/reactive-var.js" />
         <item url="file://$USER_HOME$/.meteor/packages/reload/1.1.11/web.browser/deprecated.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/session/1.1.7/web.browser/session.js" />
         <item url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.18.1/web.browser/moment.js" />
         <item url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.18.1/web.browser/export.js" />
         <item url="file://$USER_HOME$/.meteor/packages/reload/1.1.11/web.browser/reload.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/reactive-dict/1.1.9/web.browser/reactive-dict.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/reactive-dict/1.1.9/web.browser/migration.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/reactive-dict/1.1.9/web.browser/reactive-dict-tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/retry/1.0.9/web.browser/retry.js" />
         <item url="file://$USER_HOME$/.meteor/packages/allow-deny/1.0.6/web.browser/allow-deny-tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/fastclick.js" />
@@ -216,9 +220,13 @@
       <root url="file://$USER_HOME$/.meteor/packages/random/1.0.10/web.browser/random.js" />
       <root url="file://$USER_HOME$/.meteor/packages/reactive-var/1.0.11/web.browser/reactive-var.js" />
       <root url="file://$USER_HOME$/.meteor/packages/reload/1.1.11/web.browser/deprecated.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/session/1.1.7/web.browser/session.js" />
       <root url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.18.1/web.browser/moment.js" />
       <root url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.18.1/web.browser/export.js" />
       <root url="file://$USER_HOME$/.meteor/packages/reload/1.1.11/web.browser/reload.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/reactive-dict/1.1.9/web.browser/reactive-dict.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/reactive-dict/1.1.9/web.browser/migration.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/reactive-dict/1.1.9/web.browser/reactive-dict-tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/retry/1.0.9/web.browser/retry.js" />
       <root url="file://$USER_HOME$/.meteor/packages/allow-deny/1.0.6/web.browser/allow-deny-tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.13/web.browser/fastclick.js" />
