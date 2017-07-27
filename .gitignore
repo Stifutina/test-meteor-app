@@ -1,2 +1,12 @@
+*~
+*#
+.DS_STORE
+.netbeans
+nbproject
+.idea
+.vscode
+.node_history
+.vscode
+
 node_modules/
 .idea/
