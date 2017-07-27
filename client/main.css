@@ -10,3 +10,23 @@ nav i.material-icons {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
+
+TABLE.timeLeftInfo {
+    table-layout: fixed;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+TABLE.timeLeftInfo TD {
+    text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+    TABLE.timeLeftInfo TD {
+        font-size: 38px;
+    }
+}
+
+.expDateDescription {
+    font-weight: bold;
+}
