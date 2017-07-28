@@ -1,5 +1,5 @@
 <body>
-<nav class="blue accent-1 row">
+<nav class="header accent-1 row">
     <div class="nav-wrapper col s12">
         <a href="/" class="brand-logo">
             <i class="material-icons">hourglass_full</i>Time counter
@@ -7,26 +7,29 @@
     </div>
 </nav>
     <div class="row">
-        <div class="col s10 m3 l3 offset-s1 offset-m1 offset-l1">
+        <div class="col s12 m10 offset-m1 l4 clock_container">
             {{>clock getClockObj}}
         </div>
-        <div class="col s10 offset-s1 m7 offset-m0 l7 offset-l0">
-            <div class="row">
+        <div class="col s12 m10 offset-m1 l8">
+            <div class="row mainForm_container">
                 <form class="new-exp-date">
-                    <div class="input-field col s12 m12 l3">
+                    <div class="col s12 l12 m12">
+                        <h5>What event are you waiting for?</h5>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
                         <input id="date" type="text" class="date _datepicker">
                         <label for="date" class="darken-3">Select expected date</label>
                     </div>
-                    <div class="input-field col s12 m12 l3">
+                    <div class="input-field col s12 m6 l6">
                         <input id="time" type="text" class="time _timepicker">
                         <label for="time" class="darken-3">Select expected time</label>
                     </div>
-                    <div class="input-field col s12 m12 l4">
+                    <div class="input-field col s12 m6 l8">
                         <input id="description" class="description" type="text">
                         <label for="description" class="darken-3">What should happen?</label>
                     </div>
-                    <div class="input-field col s12 m12 l2">
-                        <button class="waves-effect waves-light btn-large light-green _submit">WAIT FOR</button>
+                    <div class="input-field col s12 m6 l4">
+                        <button class="waves-effect waves-light btn-large _submit">WAIT FOR</button>
                     </div>
                 </form>
             </div>
@@ -38,15 +41,4 @@
             </div>
         </div>
     </div>
-
-    <!--<script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-103427084-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>-->
 </body>

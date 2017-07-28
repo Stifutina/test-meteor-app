@@ -1,26 +1,24 @@
 <template name="date">
     <div class="row counterInfo" data-user="{{userId}}">
-        <div class="col l8 m12 s12">
+        <div class="col l8 m12 s12 eventInfo">
             <span data-date="{{date}}" class="expDate">Expected date : {{prettyDate}}</span> - <span class="expDateDescription">{{description}}</span>
         </div>
         <div class="col l4 m12 s12">
-            <a class="waves-effect waves-red btn-flat right stop_counter-js red-text text-darken-2">STOP WAITING</a>
+            <a class="waves-effect waves-red btn-flat stop_counter-js">STOP WAITING</a>
         </div>
 
         <div class="col l12 m12 s12">
-            <table class="timeLeftInfo responsive-table">
-                <tr>
-                    {{#with timeLeft}}
-                        <td class="light-blue darken-1">{{years}}</td>
-                        <td class="light-blue">{{months}}</td>
-                        <td class="light-blue lighten-1">{{weeks}}</td>
-                        <td class="light-blue lighten-2">{{days}}</td>
-                        <td class="light-blue lighten-3">{{hours}}</td>
-                        <td class="light-blue lighten-4">{{minutes}}</td>
-                        <td class="light-blue lighten-5">{{seconds}}</td>
-                    {{/with}}
-                </tr>
-            </table>
+            <div class="timeLeftInfo">
+                {{#with timeLeft}}
+                    <div>{{years}}</div>
+                    <div>{{months}}</div>
+                    <div>{{weeks}}</div>
+                    <div>{{days}}</div>
+                    <div>{{hours}}</div>
+                    <div>{{minutes}}</div>
+                    <div>{{seconds}}</div>
+                {{/with}}
+            </div>
         </div>
     </div>
 </template>

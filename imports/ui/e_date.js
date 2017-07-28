@@ -50,7 +50,7 @@ Template.date.helpers({
         return  result;
     },
     prettyDate() {
-        return moment(this.date).format('YYYY-MM-DD hh:mm:ss')
+        return moment(this.date).format('dddd, DD-MMMM-YYYY hh:mm:ss')
     },
     uniqueId() {
         return 'rand__' + (new Date(this.createdAt).getTime().toString(36))
