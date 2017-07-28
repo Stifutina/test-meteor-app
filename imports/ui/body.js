@@ -53,9 +53,20 @@ Template.body.events({
                     createdAt: new Date(), // current time
                 });
 
-
                 $(target)[0].reset();
                 $(target).find('LABEL').removeClass('active');
+
+                if (!Meteor.isDevelopment) {
+                    analytics.track("add event", {
+                        eventName: description,
+                        data: {
+                            date: dateExp,
+                            description,
+                            userId: getUserId(),
+                            createdAt: new Date(), // current time
+                        }
+                    });
+                }
             } else {
                 Materialize.toast('You can not wait for what has already happened', 5000, 'red')
             }
