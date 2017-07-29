@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="955fc361-1514-435f-9f74-5a1d1b0c07c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/application/layout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/includes/expDateDetails/exp_date_details.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/includes/expDateDetails/exp_date_details.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/router.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imports/ui/body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imports/ui/body.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/add_date_form.html" afterPath="$PROJECT_DIR$/client/views/includes/addExpDateForm/add_date_form.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/add_date_form.js" afterPath="$PROJECT_DIR$/client/views/includes/addExpDateForm/add_date_form.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/clock.html" afterPath="$PROJECT_DIR$/client/views/includes/clock/clock.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/clock.js" afterPath="$PROJECT_DIR$/client/views/includes/clock/clock.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/counters.html" afterPath="$PROJECT_DIR$/client/views/includes/countersList/counters.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/counters.js" afterPath="$PROJECT_DIR$/client/views/includes/countersList/counters.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/e_date.html" afterPath="$PROJECT_DIR$/client/views/includes/date/e_date.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imports/ui/e_date.js" afterPath="$PROJECT_DIR$/client/views/includes/date/e_date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.css" afterPath="$PROJECT_DIR$/client/main.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/router.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -136,7 +131,6 @@
         <option value="$PROJECT_DIR$/imports/ui/add_date_form.js" />
         <option value="$PROJECT_DIR$/imports/ui/add_date_form.html" />
         <option value="$PROJECT_DIR$/imports/ui/body.html" />
-        <option value="$PROJECT_DIR$/client/main.css" />
         <option value="$PROJECT_DIR$/imports/ui/e_date.html" />
         <option value="$PROJECT_DIR$/imports/ui/body.js" />
         <option value="$PROJECT_DIR$/client/views/application/layout.html" />
@@ -157,6 +151,7 @@
         <option value="$PROJECT_DIR$/client/views/includes/addExpDateForm/add_date_form.js" />
         <option value="$PROJECT_DIR$/client/views/includes/date/e_date.js" />
         <option value="$PROJECT_DIR$/client/views/includes/expDateDetails/exp_date_details.js" />
+        <option value="$PROJECT_DIR$/client/main.css" />
       </list>
     </option>
   </component>
@@ -534,12 +529,12 @@
       <workItem from="1501098513129" duration="4174000" />
       <workItem from="1501107522878" duration="1456000" />
       <workItem from="1501233177512" duration="920000" />
-      <workItem from="1501332809990" duration="22857000" />
+      <workItem from="1501332809990" duration="23119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69801000" />
+    <option name="totallyTimeSpent" value="70063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="39" width="1922" height="1042" extended-state="6" />
@@ -806,14 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="152" column="27" lean-forward="false" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/includes/clock/clock.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -975,6 +962,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
           <folding />
         </state>
       </provider>

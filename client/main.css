@@ -83,7 +83,10 @@ nav i.material-icons {
 
 .expDateDescription {
     font-weight: bold;
-    color: #FFFFFF;
+    text-align: right;
+    color: #DF3031;
+    border-bottom: 2px solid #2C9F9B;
+    line-height: 35px;
 }
 
 .timeLeftInfo {
