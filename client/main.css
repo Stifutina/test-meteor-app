@@ -6,9 +6,9 @@ BODY, HTML {
 BODY {
     background-color: #000;
     /*background-image: url("cosmos-bg.jpg");*/
-    background-image: url("science-fiction-bg.jpg");
+    background-image: url("http://www.pngmart.com/?p=37320");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 /* ----------- Non-Retina Screens ----------- */
@@ -26,7 +26,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (min-resolution: 192dpi) {
 }
 NAV.header {
-    background-color: #2A3D69;
+    background-color: #3c4760;
 }
 /* MATERIAL OVERRIDE */
 nav i.material-icons {
