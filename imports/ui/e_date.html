@@ -1,8 +1,10 @@
 <template name="date">
     <div class="row counterInfo" data-user="{{userId}}">
         <div class="col l12 m12 s12 eventInfo">
-            <h5 class="expDateDescription">{{description}}</h5>
-            <span data-date="{{date}}" class="expDate">Expected date : <b>{{prettyDate}}</b></span>
+            <a href="/viewEventInfo">
+                <h5 class="expDateDescription">{{description}}</h5>
+            </a>
+            <!--<span data-date="{ {date}}" class="expDate">Expected date : <b>{ {prettyDate}}</b></span>-->
         </div>
         <!--<div class="col l4 m12 s12">
             <a class="waves-effect waves-red btn-flat stop_counter-js">STOP WAITING</a>
@@ -22,7 +24,7 @@
                     {{/with}}
                 {{else}}
                     <div class="noTimeLeft">
-                        <h4>The event, that you were waiting for, happened!</h4>
+                        <h4>This event already happened!</h4>
                     </div>
                 {{/if}}
             </div>

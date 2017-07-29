@@ -53,13 +53,21 @@ nav i.material-icons {
 }
 .mainForm_container {
     color: #ECF0F1;
+    width: 100%;
+    max-width: 600px;
+    /*float: left;*/
+    margin: 40px auto;
 }
 .new-exp-date ._submit {
     width: 100%;
+    max-width: 200px;
+    float: right;
     background-color: #1cbac7;
 }
 .new-exp-date .cancel_add_event {
     width: 100%;
+    float: left;
+    max-width: 200px;
 }
 /* COUNTERS */
 .counters_list {
@@ -70,7 +78,12 @@ nav i.material-icons {
 }
 .eventInfo {
     color: #63f7e5;
-    text-align: right;
+    text-align: center;
+}
+
+.expDateDescription {
+    font-weight: bold;
+    color: #FFFFFF;
 }
 
 .timeLeftInfo {
@@ -119,7 +132,6 @@ a.stop_counter-js {
         float: none;
         display: block;
         width: 200px;
-        text-align: center;
         margin: 23px auto 0;
     }
     .eventInfo {
@@ -132,11 +144,6 @@ a.stop_counter-js {
     }
 }
 
-.expDateDescription {
-    font-weight: bold;
-    color: #E53D3D;
-}
-
 
 /* CLOCK BLOCK */
 
@@ -147,7 +154,7 @@ a.stop_counter-js {
     margin: 0 auto;
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 450px;
     background-color: rgba(236, 240, 241, 0.1);
     color: #ECF0F1;
     line-height: 50px;
