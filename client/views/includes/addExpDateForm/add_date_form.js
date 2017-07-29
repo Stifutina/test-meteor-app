@@ -1,4 +1,4 @@
-import { Dates } from '../api/dates.js';
+import { Dates } from '/imports/api/dates.js';
 
 import './add_date_form.html';
 
@@ -43,9 +43,6 @@ Template.addExpDateForm.events({
                         }
                     });
                 }
-
-                /* return to list */
-                Session.set('mainTemplate', 'countersList');
             } else {
                 Materialize.toast('You can not wait for what has already happened', 5000, 'red')
             }
@@ -57,10 +54,20 @@ Template.addExpDateForm.events({
 
         $(target).closest('FORM')[0].reset();
         $(target).closest('FORM').find('LABEL').removeClass('active');
-
-        Session.set('mainTemplate', 'countersList');
     }
 });
+
+setUserId = () => {
+    if (!localStorage.getItem('userId')) {
+        localStorage.setItem('userId', Math.random().toString(36).slice(-14));
+    }
+
+    return localStorage.getItem('userId');
+};
+
+getUserId = () => {
+    return (localStorage.getItem('userId')) || setUserId();
+};
 
 initDateTimePickers = () => {
     $('._datepicker').pickadate({

@@ -2,6 +2,13 @@
  * Created by phoenix on 28.07.17.
  */
 import './clock.html';
+import { Session } from 'meteor/session';
+
+if (Meteor.isClient) {
+    Meteor.setInterval(function() {
+        Session.set('now', moment(Date.now()).format('DD/MM/YYYY HH:mm:ss'));
+    }, 1000);
+}
 
 Template.clock.helpers({
     getClockObj() {

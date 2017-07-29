@@ -1,14 +1,12 @@
-<template name="date">
+<template name="expDateDetails">
     <div class="row counterInfo" data-user="{{userId}}">
         <div class="col l12 m12 s12 eventInfo">
-            <a href="/viewEventInfo">
-                <h5 class="expDateDescription">{{description}}</h5>
-            </a>
-            <!--<span data-date="{ {date}}" class="expDate">Expected date : <b>{ {prettyDate}}</b></span>-->
+            <h5 class="expDateDescription">{{description}}</h5>
+            <span data-date="{{date}}" class="expDate">Expected date : <b>{{prettyDate}}</b></span>
         </div>
-        <!--<div class="col l4 m12 s12">
+        <div class="col l4 m12 s12">
             <a class="waves-effect waves-red btn-flat stop_counter-js">STOP WAITING</a>
-        </div>-->
+        </div>
 
         <div class="col l12 m12 s12">
             <div class="timeLeftInfo">

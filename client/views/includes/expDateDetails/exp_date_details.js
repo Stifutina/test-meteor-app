@@ -1,18 +1,11 @@
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
-import { Dates } from '../api/dates.js';
+import { Dates } from '/imports/api/dates.js';
 
-import './e_date.html';
-
-
-if (Meteor.isClient) {
-    Meteor.setInterval(function() {
-        Session.set('now', moment(Date.now()).format('DD/MM/YYYY HH:mm:ss'));
-    }, 1000);
-}
+import './exp_date_details.html';
 
 
-Template.date.events({
+Template.expDateDetails.events({
     'click .stop_counter-js'() {
         if (confirm('Are you sure that you are not waiting for this?')) {
             Dates.remove(this._id);
@@ -21,7 +14,7 @@ Template.date.events({
 });
 
 
-Template.date.helpers({
+Template.expDateDetails.helpers({
     timeLeft() {
         const then = moment(this.date).format('DD/MM/YYYY HH:mm:ss'); /* end date */
         const momentNow = moment(Session.get('now'),"DD/MM/YYYY HH:mm:ss");

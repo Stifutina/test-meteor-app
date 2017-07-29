@@ -1,4 +1,4 @@
-import { Dates } from '../api/dates.js';
+import { Dates } from '/imports/api/dates.js';
 import './counters.html';
 
 Template.countersList.helpers({
