@@ -1,0 +1,27 @@
+<template name="addExpDateForm">
+    <div class="row mainForm_container">
+        <form class="new-exp-date">
+            <div class="col s12 l12 m12">
+                <h5>What event are you waiting for?</h5>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <input id="date" type="text" class="date _datepicker">
+                <label for="date" class="darken-3">Select expected date</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <input id="time" type="text" class="time _timepicker">
+                <label for="time" class="darken-3">Select expected time</label>
+            </div>
+            <div class="input-field col s12 m12 l12">
+                <input id="description" class="description" type="text">
+                <label for="description" class="darken-3">What should happen?</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <button class="waves-effect waves-light btn-large grey darken-1 cancel_add_event">CANCEL</button>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <button class="waves-effect waves-light btn-large _submit">WAIT FOR</button>
+            </div>
+        </form>
+    </div>
+</template>

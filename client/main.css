@@ -6,9 +6,9 @@ BODY, HTML {
 BODY {
     background-color: #000;
     /*background-image: url("cosmos-bg.jpg");*/
-    background-image: url("http://www.pngmart.com/?p=37320");
+    background-image: url("bg10.jpg"); /* @todo: make rotate */
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 /* ----------- Non-Retina Screens ----------- */
@@ -26,7 +26,8 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (min-resolution: 192dpi) {
 }
 NAV.header {
-    background-color: #3c4760;
+    background-color: rgba(236, 240, 241, 0.12);
+    border-bottom: 1px solid rgba(73, 111, 195, 0.35);
 }
 /* MATERIAL OVERRIDE */
 nav i.material-icons {
@@ -34,36 +35,42 @@ nav i.material-icons {
     vertical-align: top;
     margin-right: 15px;
 }
+
+.add_event_modal {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* FORM MODAL */
 .mainForm_container input[type=text]:focus:not([readonly]) {
-    border-bottom: 1px solid #2D4D85;
-    box-shadow: 0 1px 0 0 #2D4D85;
+    border-bottom: 1px solid #ECF0F1;
+    box-shadow: 0 1px 0 0 #ECF0F1;
 }
 .mainForm_container input[type=text]:focus:not([readonly]) + label {
-    color: #2D4D85
+    color: #ECF0F1;
 }
-/* FORM */
 .mainForm_container {
-    padding: 14px 0;
-    background-color: rgba(10, 18, 38, 0.6);
-    border-top: 1px solid #2A3D69;
-    border-bottom: 1px solid #2A3D69;
-    color: #86AADC;
+    color: #ECF0F1;
 }
 .new-exp-date ._submit {
     width: 100%;
-    background-color: #669943;
+    background-color: #1cbac7;
+}
+.new-exp-date .cancel_add_event {
+    width: 100%;
 }
 /* COUNTERS */
 .counters_list {
-    margin-top: 50px;
-    background-color: rgba(10, 18, 38, 0.6);
-    border-bottom: 1px solid #2A3D69;
+
 }
 .counterInfo {
     padding: 10px 0;
 }
 .eventInfo {
-    color: #ddeeff;
+    color: #63f7e5;
+    text-align: right;
 }
 
 .timeLeftInfo {
@@ -126,6 +133,7 @@ a.stop_counter-js {
 
 .expDateDescription {
     font-weight: bold;
+    color: #E53D3D;
 }
 
 
@@ -139,8 +147,8 @@ a.stop_counter-js {
     display: block;
     width: 100%;
     max-width: 300px;
-    background-color: rgba(10, 18, 38, 0.6);
-    color: #86AADC;
+    background-color: rgba(236, 240, 241, 0.1);
+    color: #ECF0F1;
     line-height: 50px;
     text-align: center;
     font-size: 30px;
@@ -149,18 +157,18 @@ a.stop_counter-js {
 .clock_container .time {
     font-size: 36px;
     line-height: 79px;
-    border: 1px solid #2A3D69;
+    border: 1px solid rgba(73, 111, 195, 0.35);
 }
 
 .clock_container .day {
-    border-left: 1px solid #2A3D69;
-    border-right: 1px solid #2A3D69;
+    border-left: 1px solid rgba(73, 111, 195, 0.35);
+    border-right: 1px solid rgba(73, 111, 195, 0.35);
 }
 
 .clock_container .date {
-    border-left: 1px solid #2A3D69;
-    border-right: 1px solid #2A3D69;
-    border-bottom: 1px solid #2A3D69;
+    border-left: 1px solid rgba(73, 111, 195, 0.35);
+    border-right: 1px solid rgba(73, 111, 195, 0.35);
+    border-bottom: 1px solid rgba(73, 111, 195, 0.35);
 }
 @media only screen and (max-width: 992px) {
     .clock_container {
