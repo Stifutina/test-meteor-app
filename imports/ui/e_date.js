@@ -28,6 +28,7 @@ Template.date.helpers({
         const momentThen = moment(then,"DD/MM/YYYY HH:mm:ss");
         const diff = moment(momentThen.diff(momentNow)); /* difference date */
         const allHours = momentThen.diff(momentNow, 'hours'); /* difference in hours */
+        const allSeconds = momentThen.diff(momentNow, 'seconds'); /* difference in hours */
 
         const seconds = diff.seconds();
         const minutes = diff.minutes();
@@ -39,13 +40,17 @@ Template.date.helpers({
 
         let result = {};
 
-        result['years'] = ((years > 0) ? years + ' years' : '');
-        result['months'] = ((months > 0) ? months + ' months' : '');
-        result['weeks'] = ((weeks > 0) ? weeks + ' weeks' : '');
-        result['days'] = ((days > 0) ? days + ' days' : '');
-        result['hours'] = ((hours > 0) ? hours + ' hours' : '');
-        result['minutes'] = ((minutes > 0) ? minutes + ' minutes' : '');
-        result['seconds'] = ((seconds > 0) ? seconds + ' seconds' : '');
+        if (allSeconds > 0) {
+            result['years'] = years + ' years';
+            result['months'] = months + ' months';
+            result['weeks'] = weeks + ' weeks';
+            result['days'] = days + ' days';
+            result['hours'] = hours + ' hours';
+            result['minutes'] = minutes + ' minutes';
+            result['seconds'] = seconds + ' seconds';
+        } else {
+            result = false;
+        }
 
         return  result;
     },
