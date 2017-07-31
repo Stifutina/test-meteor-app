@@ -1,19 +1,19 @@
 <template name="layout">
-    <nav class="header accent-1 row">
-        <div class="nav-wrapper col s12">
-            <a href="/" class="brand-logo">
-                <i class="material-icons">hourglass_full</i>Time counter
-            </a>
+    <main>
+        <div class="row">
+            <div class="col s12 m10 offset-m1 l4 clock_container">
+                <a href="/">
+                    <div class="illuminator_border">
+                        <div class="illuminator"></div>
+                    </div>
+                </a>
+                {{>clock getClockObj}}
+                <button class="waves-effect waves-light btn-large amber darken-1 add_event_modal">ADD EVENT</button>
+            </div>
+            <div class="col s12 m10 offset-m1 l8" id="mainContainer">
+                <!--{ {>Template.dynamic template=getMainTemplate}}-->
+                {{> yield}}
+            </div>
         </div>
-    </nav>
-    <div class="row">
-        <div class="col s12 m10 offset-m1 l4 clock_container">
-            {{>clock getClockObj}}
-            <button class="waves-effect waves-light btn-large amber darken-1 add_event_modal">ADD EVENT</button>
-        </div>
-        <div class="col s12 m10 offset-m1 l8" id="mainContainer">
-            <!--{ {>Template.dynamic template=getMainTemplate}}-->
-            {{> yield}}
-        </div>
-    </div>
+    </main>
 </template>
