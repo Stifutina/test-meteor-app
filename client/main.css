@@ -39,6 +39,37 @@ and (max-device-width: 1600px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (min-resolution: 192dpi) {
 }
+
+.blueBorderedContainer {
+    padding: 30px 60px;
+    border: 1px solid #01B0FF;
+    position: relative;
+}
+.blueBorderedContainer:after,
+.blueBorderedContainer::after {
+    position: absolute;
+    content: "";
+    width: 102%;
+    height: calc(100% - 50px);
+    top: 25px;
+    left: -1%;
+    background-color: #000;
+}
+.blueBorderedContainer:before,
+.blueBorderedContainer::before {
+    position: absolute;
+    content: "";
+    height: 102%;
+    width: calc(100% - 50px);
+    left: 25px;
+    top: -1%;
+    background-color: #000;
+}
+.blueBorderedContainer > * {
+    position: relative;
+    z-index: 3;
+}
+
 /* ILLUMINATOR */
 .illuminator_container {
     display: block;
@@ -122,10 +153,14 @@ nav i.material-icons {
 
 .expDateDescription {
     font-weight: bold;
-    text-align: right;
-    color: #DF3031;
-    border-bottom: 2px solid #2C9F9B;
+    color: #01B0FF;
+    padding: 30px 200px;
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
     line-height: 35px;
+    display: block;
 }
 
 .timeLeftInfo {
@@ -202,7 +237,7 @@ a.stop_counter-js {
     display: block;
     width: 100%;
     max-width: 450px;
-    color: #00DEFF;
+    color: #01B0FF;
     line-height: 50px;
     text-align: center;
     font-size: 30px;
@@ -213,9 +248,9 @@ a.stop_counter-js {
 .clock_container .date {
     position: relative;
     line-height: 100px;
-    border-left: 1px solid #00DEFF;
-    border-right: 1px solid #00DEFF;
-    border-bottom: 1px solid #00DEFF;
+    border-left: 1px solid #01B0FF;
+    border-right: 1px solid #01B0FF;
+    border-bottom: 1px solid #01B0FF;
 }
 .clock_container .date:before,
 .clock_container .date::before {
@@ -228,9 +263,9 @@ a.stop_counter-js {
     width: 50%;
 }
 .clock_container .time {
-    border-left: 1px solid #00DEFF;
-    border-right: 1px solid #00DEFF;
-    border-top: 1px solid #00DEFF;
+    border-left: 1px solid #01B0FF;
+    border-right: 1px solid #01B0FF;
+    border-top: 1px solid #01B0FF;
     font-size: 45px;
     line-height: 100px;
     position: relative;
