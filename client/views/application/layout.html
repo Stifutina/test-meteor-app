@@ -10,13 +10,14 @@
 
             <div class="col s12 m12 l12 xl6 clock_container">
                 {{>clock getClockObj}}
-                <button class="waves-effect waves-light btn-large amber darken-1 add_event_modal">ADD EVENT</button>
             </div>
         </div>
 
         <div class="row">
             <div class="col s12 m12 l12" id="mainContainer">
                 {{> yield}}
+
+                <a class="waves-effect waves-light btn-large amber darken-1 add_event_modal" href="/add">ADD EVENT</a>
             </div>
         </div>
     </main>

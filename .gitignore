@@ -3,12 +3,9 @@
 .DS_STORE
 .netbeans
 nbproject
-.idea
+.idea/
 .vscode
 .node_history
 .vscode
 
 node_modules/
-.idea/
-.idea/*
-idea

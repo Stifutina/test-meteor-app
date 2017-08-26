@@ -28,9 +28,6 @@ Template.addExpDateForm.events({
                     createdAt: new Date(), // current time
                 });
 
-                $(target)[0].reset();
-                $(target).find('LABEL').removeClass('active');
-
                 /* track ga */
                 if (!Meteor.isDevelopment) {
                     analytics.track("add event", {
@@ -43,6 +40,8 @@ Template.addExpDateForm.events({
                         }
                     });
                 }
+
+                Router.go('/');
             } else {
                 Materialize.toast('You can not wait for what has already happened', 5000, 'red')
             }
@@ -52,8 +51,7 @@ Template.addExpDateForm.events({
     'click .cancel_add_event'(event) {
         const target = event.target;
 
-        $(target).closest('FORM')[0].reset();
-        $(target).closest('FORM').find('LABEL').removeClass('active');
+        Router.go('/');
     }
 });
 
