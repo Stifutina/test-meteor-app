@@ -1,29 +1,16 @@
 <template name="date">
-    <div class="row counterInfo" data-user="{{userId}}">
-        <div class="col l12 m12 s12 eventInfo">
+    <div class="counterInfo" data-user="{{userId}}">
+        <div class="eventInfo">
             <a href="/expDateDetails/{{_id}}">
-                <h5 class="expDateDescription blueBorderedContainer"><span>{{description}}</span></h5>
+                <h4 class="expDateDescription"><span>{{description}}</span></h4>
             </a>
         </div>
 
-        <div class="col l12 m12 s12">
-            <div class="timeLeftInfo">
-                {{#if timeLeft}}
-                    {{#with timeLeft}}
-                        <div>{{years}}</div>
-                        <div>{{months}}</div>
-                        <div>{{weeks}}</div>
-                        <div>{{days}}</div>
-                        <div>{{hours}}</div>
-                        <div>{{minutes}}</div>
-                        <div>{{seconds}}</div>
-                    {{/with}}
-                {{else}}
-                    <div class="noTimeLeft">
-                        <h4>This event already happened!</h4>
-                    </div>
-                {{/if}}
-            </div>
-        </div>
+        {{#if secondsLeft}}
+            <div class="timeLeftInfo" id="id_{{_id}}"></div>
+        {{else}}
+            <h5>This event already happened!</h5>
+        {{/if}}
+
     </div>
 </template>

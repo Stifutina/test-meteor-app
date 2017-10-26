@@ -1,0 +1,26 @@
+/* FORM MODAL */
+.mainForm_container input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #ECF0F1;
+    box-shadow: 0 1px 0 0 #ECF0F1;
+}
+.mainForm_container input[type=text]:focus:not([readonly]) + label {
+    color: #ECF0F1;
+}
+.mainForm_container {
+    color: #ECF0F1;
+    width: 100%;
+    max-width: 600px;
+    /*float: left;*/
+    margin: 40px auto;
+}
+.new-exp-date ._submit {
+    width: 100%;
+    max-width: 200px;
+    float: right;
+    background-color: #1cbac7;
+}
+.new-exp-date .cancel_add_event {
+    width: 100%;
+    float: left;
+    max-width: 200px;
+}

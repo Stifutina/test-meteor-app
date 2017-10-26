@@ -1,4 +1,5 @@
 <template name="clock">
+    <a href="/">
     {{#with getClockObj}}
         <div class="day">{{dayName}}</div>
         <div class="time">
@@ -8,4 +9,5 @@
             <span>{{day}}</span> <span>{{month}}</span>, <span>{{year}}</span>
         </div>
     {{/with}}
+    </a>
 </template>

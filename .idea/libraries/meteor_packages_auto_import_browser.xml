@@ -156,6 +156,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/modules/0.9.2/web.browser/server.js" />
         <item url="file://$USER_HOME$/.meteor/packages/base64/1.0.10/web.browser/base64.js" />
         <item url="file://$USER_HOME$/.meteor/packages/modules/0.9.2/web.browser/css.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/d3js_d3/3.5.8/web.browser/packages/d3js_d3.js" />
         <item url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.6/web.browser/dist/js/materialize.js" />
         <item url="file://$USER_HOME$/.meteor/packages/modules/0.9.2/web.browser/client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/min-max-heap.js" />
@@ -349,6 +350,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/modules/0.9.2/web.browser/server.js" />
       <root url="file://$USER_HOME$/.meteor/packages/base64/1.0.10/web.browser/base64.js" />
       <root url="file://$USER_HOME$/.meteor/packages/modules/0.9.2/web.browser/css.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/d3js_d3/3.5.8/web.browser/packages/d3js_d3.js" />
       <root url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.6/web.browser/dist/js/materialize.js" />
       <root url="file://$USER_HOME$/.meteor/packages/modules/0.9.2/web.browser/client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/min-max-heap.js" />
