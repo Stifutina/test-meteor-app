@@ -10,12 +10,22 @@
     text-align: center;
 }
 .timeLeftInfo {
-    max-width: 250px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap
+}
+.infoCounter {
+    width: 150px;
+    height: 150px;
 }
 .rbc-center-text {
     font-family: 'Roboto', 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial;
     fill: white;
-    font-size: 45px;
+    font-size: 69px;
+    text-transform: uppercase
 }
 .counterInfo H5 {
     display: inline;

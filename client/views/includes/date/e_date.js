@@ -14,10 +14,6 @@ Template.date.onRendered(() => {
     Meteor.setTimeout(() => {
         drawChart(id, dateStart, dateEnd);
     }, 1000);
-
-    Meteor.setInterval(function() {
-        updateChart(dateStart, dateEnd);
-    }, 1000);
 });
 
 Template.date.events({
@@ -77,85 +73,102 @@ Template.date.helpers({
 });
 
 
-let progressChart;
-
-
 function drawChart(id, dateStart, dateEnd) {
     const contElem = document.querySelector('#id_'+id);
+    let progressCharts = {};
 
     function fields() {
         const then = moment(dateEnd).format('DD/MM/YYYY HH:mm:ss'); /* end date */
         const momentNow = moment(Session.get('now'),"DD/MM/YYYY HH:mm:ss");
         const momentThen = moment(then,"DD/MM/YYYY HH:mm:ss");
         const momentStartWaiting = moment(dateStart);
+        const diff = moment(momentThen.diff(momentNow));
+        const allHours = momentThen.diff(momentNow, 'hours');
         const allSeconds = momentThen.diff(momentNow, 'seconds'); /* difference in hours */
         const sumSecondsFromStart = momentThen.diff(momentStartWaiting, 'seconds');
+        let timeUnits;
 
-        return  [allSeconds, sumSecondsFromStart];
+        /* result */
+        const seconds = diff.seconds();
+        const minutes = diff.minutes();
+        const hours = allHours % 24;
+        const days = parseInt(allHours / 24) % 7;
+        const weeks = parseInt((allHours / 24) / 7) % 4;
+        const months = momentThen.diff(momentNow, 'months') % 12;
+        const years = momentThen.diff(momentNow, 'years');
+
+        timeUnits = {
+            seconds: [seconds, 60],
+            minutes: [minutes, 60],
+            hours: [hours, 24],
+            days: [days, 7],
+            weeks: [weeks, 4],
+            months: [months, 12],
+            years: [years, 100]
+        };
+
+        return  [allSeconds, timeUnits];
     }
 
     function init() {
-        let [secondsLeft, allSeconds] = fields();
-        let secondsGone = allSeconds - secondsLeft;
-        let progress = (secondsGone * 100) / allSeconds;
+        let [secondsLeft, timeUnits] = fields();
 
         if (secondsLeft <= 0) return false;
 
-        progressChart = new RadialProgressChart(contElem, {
-            diameter: 200,
-            series: [{
-                labelStart: '',
-                value: 0,
-                animation : false,
-                color: {
-                    linearGradient: {
-                        x1: '0%',
-                        y1: '100%',
-                        x2: '50%',
-                        y2: '0%',
-                        spreadMethod: 'pad'
-                    },
-                    stops: [{
-                        offset: '0%',
-                        'stop-color': '#ffff00',
-                        'stop-opacity': 1
-                    }, {
-                        offset: '100%',
-                        'stop-color': '#ff0000',
-                        'stop-opacity': 1
-                    }]
-                }
-            }],
-            center: function(p) {
-                return progress.toFixed(2) + ' %'
-            }
-        });
+        Object.keys(timeUnits).forEach((key) => {
+            let progress = (timeUnits[key][0] * 100) / timeUnits[key][1];
+            let container = document.createElement('DIV');
+            container.classList.add(key);
+            container.classList.add('infoCounter');
+            contElem.appendChild(container);
 
-        progressChart.update(progress);
+            progressCharts[key] = new RadialProgressChart(container, {
+                diameter: 160,
+                series: [{
+                    labelStart: '',
+                    value: progress,
+                    animation : false,
+                    color: {
+                        linearGradient: {
+                            x1: '0%',
+                            y1: '100%',
+                            x2: '50%',
+                            y2: '0%',
+                            spreadMethod: 'pad'
+                        },
+                        stops: [{
+                            offset: '0%',
+                            'stop-color': '#ffff00',
+                            'stop-opacity': 1
+                        }, {
+                            offset: '100%',
+                            'stop-color': '#ff0000',
+                            'stop-opacity': 1
+                        }]
+                    }
+                }],
+                center: function(p) {
+                    return key.slice(0, 1)
+                }
+            });
+
+        });
     }
 
     init();
-}
 
-function updateChart(dateStart, dateEnd) {
-    function fields() {
-        const then = moment(dateEnd).format('DD/MM/YYYY HH:mm:ss'); /* end date */
-        const momentNow = moment(Session.get('now'),"DD/MM/YYYY HH:mm:ss");
-        const momentThen = moment(then,"DD/MM/YYYY HH:mm:ss");
-        const momentStartWaiting = moment(dateStart);
-        const allSeconds = momentThen.diff(momentNow, 'seconds'); /* difference in hours */
-        const sumSecondsFromStart = momentThen.diff(momentStartWaiting, 'seconds');
 
-        return  [allSeconds, sumSecondsFromStart];
-    }
+    Meteor.setInterval(function() {
+        let [secondsLeft, timeUnits] = fields();
 
-    let [secondsLeft, allSeconds] = fields();
-    let secondsGone = allSeconds - secondsLeft;
-    let progress = (secondsGone * 100) / allSeconds;
+        if (secondsLeft <= 0) return false;
 
-    if (secondsLeft <= 0) return false;
+        Object.keys(timeUnits).forEach((key) => {
+            let progress = (timeUnits[key][0] * 100) / timeUnits[key][1];
 
-    console.log('progress', progress);
+            progressCharts[key].update(progress);
+        });
 
-    progressChart.update(progress);
+        //console.log('progress', progress);
+    }, 1000);
 }
