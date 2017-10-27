@@ -9,13 +9,21 @@
     color: #63f7e5;
     text-align: center;
 }
+.expDate {
+    display: block;
+    text-align: left;
+    font-size: 25px;
+    padding: 10px 0 40px;
+}
 .timeLeftInfo {
     max-width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    font-size: 22px;
+    color: #fff
 }
 .infoCounter {
     width: 150px;
@@ -28,16 +36,16 @@
     text-transform: uppercase
 }
 .counterInfo H5 {
-    display: inline;
+    display: block;
     color: #fff;
-    float: right;
-    font-size: 16px;
+    font-size: 32px;
+    text-transform: capitalize;
 }
 .expDateDescription {
     font-weight: bold;
     color: #01B0FF;
     padding: 30px 0;
-    width: 80%;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     text-align: left;
@@ -46,8 +54,6 @@
 }
 
 a.stop_counter-js {
-    border: 1px solid #542232;
-    color: #994366;
     float: right;
 }
 @media only screen and (max-width: 992px) {

@@ -1,14 +1,14 @@
 <template name="expDateDetails">
     <div class="row counterInfo" data-user="{{userId}}">
         <div class="col l12 m12 s12 eventInfo">
-            <h5 class="expDateDescription">{{description}}</h5>
+            <h5 class="expDateDescription">Event : {{description}}</h5>
             <span data-date="{{date}}" class="expDate">Expected date : <b>{{prettyDate}}</b></span>
         </div>
 
         <div class="col l12 m12 s12">
             {{#if timeLeft}}
                 {{#with timeLeft}}
-                    <div class="timeLeftInfo">
+                    <div class="timeLeftInfo card-panel indigo darken-1">
                         <div>{{years}}</div>
                         <div>{{months}}</div>
                         <div>{{weeks}}</div>
@@ -18,7 +18,7 @@
                         <div>{{seconds}}</div>
                     </div>
 
-                    <div class="timeLeftInfo">
+                    <div class="timeLeftInfo card-panel indigo darken-3">
                         <div>{{allTimes.years}}</div>
                         <div>{{allTimes.months}}</div>
                         <div>{{allTimes.weeks}}</div>
@@ -35,7 +35,7 @@
             {{/if}}
         </div>
         <div class="col l12 m12 s12">
-            <a class="waves-effect waves-red btn-flat stop_counter-js">STOP WAITING</a>
+            <a class="btn-large waves-effect waves-light red stop_counter-js">STOP WAITING</a>
         </div>
     </div>
 </template>
