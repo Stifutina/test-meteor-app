@@ -116,6 +116,10 @@ function drawChart(id, dateStart, dateEnd) {
         if (secondsLeft <= 0) return false;
 
         Object.keys(timeUnits).forEach((key) => {
+            if ((key === 'years' || key === 'months' || key === 'weeks') && timeUnits[key][0] === 0) {
+                return false
+            }
+
             let progress = (timeUnits[key][0] * 100) / timeUnits[key][1];
             let container = document.createElement('DIV');
             container.classList.add(key);
@@ -123,11 +127,10 @@ function drawChart(id, dateStart, dateEnd) {
             contElem.appendChild(container);
 
             progressCharts[key] = new RadialProgressChart(container, {
-                diameter: 160,
+                diameter: 500,
                 series: [{
                     labelStart: '',
-                    value: progress,
-                    animation : false,
+                    value: 0,
                     color: {
                         linearGradient: {
                             x1: '0%',
@@ -138,17 +141,20 @@ function drawChart(id, dateStart, dateEnd) {
                         },
                         stops: [{
                             offset: '0%',
-                            'stop-color': '#ffff00',
+                            'stop-color': '#00DEFF',
                             'stop-opacity': 1
                         }, {
                             offset: '100%',
-                            'stop-color': '#ff0000',
+                            'stop-color': '#01b0ff',
                             'stop-opacity': 1
                         }]
                     }
                 }],
-                center: function(p) {
-                    return key.slice(0, 1)
+                center: {
+                    content: [function(value) {
+                        return Math.round((value * timeUnits[key][1]) / 100)
+                    }, key],
+                    y: 30
                 }
             });
 
@@ -166,7 +172,12 @@ function drawChart(id, dateStart, dateEnd) {
         Object.keys(timeUnits).forEach((key) => {
             let progress = (timeUnits[key][0] * 100) / timeUnits[key][1];
 
+            if ((key === 'years' || key === 'months' || key === 'weeks') && timeUnits[key][0] === 0) {
+                return false
+            }
+
             progressCharts[key].update(progress);
+
         });
 
         //console.log('progress', progress);

@@ -18,7 +18,7 @@ Template.clock.helpers({
             return {
                 year: momentNow.format("YYYY"),
                 month: momentNow.format("MMMM"),
-                day: momentNow.day(),
+                day: momentNow.date(),
                 dayName: momentNow.format("dddd"),
                 hours: momentNow.format("HH"),
                 minutes: momentNow.format("mm"),

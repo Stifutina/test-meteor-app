@@ -9,6 +9,8 @@ Template.expDateDetails.events({
     'click .stop_counter-js'() {
         if (confirm('Are you sure that you are not waiting for this?')) {
             Dates.remove(this._id);
+
+            window.location = '/';
         }
     },
 });
