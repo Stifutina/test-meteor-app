@@ -51,13 +51,13 @@ nav i.material-icons {
     width: 100%;
     max-width: 250px;
     display: block;
-    margin: 20px auto 10px 35px;
+    margin: 20px auto 10px auto;
 }
 
 .btn-fly {
     width: 100%;
     max-width: 250px;
     display: block;
-    margin: 20px auto 50px 35px;
+    margin: 20px auto 50px auto;
     color: #fff;
 }

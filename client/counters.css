@@ -62,9 +62,10 @@
 }
 .counterInfo H5 {
     display: block;
-    color: #fff;
-    font-size: 32px;
-    text-transform: capitalize;
+    text-align: center;
+    color: #5e6571;
+    font-size: 19px;
+    text-transform: uppercase;
 }
 .expDateDescription {
     font-weight: bold;
@@ -99,5 +100,11 @@ a.stop_counter-js {
     .eventInfo {
         text-align: center;
         font-size: 20px;
+    }
+
+    .infoCounter {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
     }
 }
