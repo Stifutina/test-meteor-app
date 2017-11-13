@@ -2,7 +2,7 @@
   "name": "meteorApp",
   "private": true,
   "scripts": {
-    "start": "meteor run --production --settings settings.json"
+    "start": "ROOT_URL=https://time-counter.herokuapp.com meteor run --production --settings settings.json"
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
