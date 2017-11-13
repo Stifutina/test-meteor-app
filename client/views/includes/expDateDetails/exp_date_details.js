@@ -7,10 +7,14 @@ import './exp_date_details.html';
 
 Template.expDateDetails.events({
     'click .stop_counter-js'() {
-        if (confirm('Are you sure that you are not waiting for this?')) {
-            Dates.remove(this._id);
+        if ((typeof Meteor.userId() === 'string') && Meteor.userId() !== null) {
+            if (confirm('Are you sure that you are not waiting for this?')) {
+                Dates.remove(this._id);
 
-            window.location = '/';
+                window.location = '/';
+            }
+        } else {
+            Router.go('/login');
         }
     },
 });

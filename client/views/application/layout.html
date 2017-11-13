@@ -8,7 +8,9 @@
                 <div class="mainNav">
                     <a href="/">MAIN PAGE</a>
                     <a href="/login">ACCOUNT</a>
+                    {{#if currentUser}}
                     <a href="/add">ADD EVENT</a>
+                    {{/if}}
                     <a href="/fly">FLY</a>
                 </div>
             </div>

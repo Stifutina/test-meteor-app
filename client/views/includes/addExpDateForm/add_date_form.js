@@ -10,41 +10,45 @@ Template.addExpDateForm.events({
     'submit .new-exp-date'(event) {
         event.preventDefault();
 
-        // Get value from form element
-        const target = event.target;
-        const date = $(target).find('#date').val();
-        const time = $(target).find('#time').val();
-        const description = $(target).find('#description').val();
+        if ((typeof Meteor.userId() === 'string') && Meteor.userId() !== null) {
+            // Get value from form element
+            const target = event.target;
+            const date = $(target).find('#date').val();
+            const time = $(target).find('#time').val();
+            const description = $(target).find('#description').val();
 
-        if (date && time && description) {
-            const dateExp = moment(moment(new Date(date)).format('YYYY-MM-DD') + ' ' + moment(time, 'hh:mm').format('HH:mm:ss')).valueOf();
+            if (date && time && description) {
+                const dateExp = moment(moment(new Date(date)).format('YYYY-MM-DD') + ' ' + moment(time, 'hh:mm').format('HH:mm:ss')).valueOf();
 
-            if (moment.now() < dateExp) {
-                /* insert to db @todo make mvc */
-                Dates.insert({
-                    date: dateExp,
-                    description,
-                    userId: getUserId(),
-                    createdAt: new Date(), // current time
-                });
-
-                /* track ga */
-                if (!Meteor.isDevelopment) {
-                    analytics.track("add event", {
-                        eventName: description,
-                        data: {
-                            date: dateExp,
-                            description,
-                            userId: getUserId(),
-                            createdAt: new Date(), // current time
-                        }
+                if (moment.now() < dateExp) {
+                    /* insert to db @todo make mvc */
+                    Dates.insert({
+                        date: dateExp,
+                        description,
+                        userId: Meteor.userId(),
+                        createdAt: new Date(), // current time
                     });
-                }
 
-                Router.go('/');
-            } else {
-                Materialize.toast('You can not wait for what has already happened', 5000, 'red')
+                    /* track ga */
+                    if (!Meteor.isDevelopment) {
+                        analytics.track("add event", {
+                            eventName: description,
+                            data: {
+                                date: dateExp,
+                                description,
+                                userId: getUserId(),
+                                createdAt: new Date(), // current time
+                            }
+                        });
+                    }
+
+                    Router.go('/');
+                } else {
+                    Materialize.toast('You can not wait for what has already happened', 5000, 'red')
+                }
             }
+        } else {
+            Router.go('/login');
         }
     },
 

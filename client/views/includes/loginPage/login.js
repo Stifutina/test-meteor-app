@@ -3,7 +3,7 @@ import { Template } from 'meteor/templating';
 import './login.html';
 
 
-Template.expDateDetails.events({
+Template.login.events({
     'click #google-login': (e) => {
         console.log('clicked google login');
         Meteor.loginWithGoogle({}, (err) => {
@@ -26,4 +26,4 @@ Template.expDateDetails.events({
 });
 
 
-Template.expDateDetails.helpers({});
+Template.login.helpers({});

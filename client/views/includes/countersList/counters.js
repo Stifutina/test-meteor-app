@@ -3,6 +3,18 @@ import './counters.html';
 
 Template.countersList.helpers({
     dates() {
-        return Dates.find({}, { sort: { createdAt: -1 } });
+        var query;
+
+        if (Meteor.user()) {
+            query = {};
+            if (!Meteor.user().profile.isAdmin) {
+                query = {
+                    userId: Meteor.user()._id
+                }
+            }
+            return Dates.find(query, { sort: { createdAt: -1 } });
+        } else {
+            return []
+        }
     }
 });
