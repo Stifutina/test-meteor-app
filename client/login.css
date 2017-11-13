@@ -1,0 +1,27 @@
+.userAccountData {
+    text-align: center;
+}
+
+.pageHeader {
+    color: #ffc600;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+}
+
+.userAvatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.userLogin {
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+#logout {
+
+}

@@ -1,8 +1,16 @@
 /* CLOCK BLOCK */
 
 .clock_container {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 40px;
+
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .clock_container .time,
@@ -10,14 +18,17 @@
 .clock_container .date {
     margin: 0 auto 0 0;
     display: block;
-    width: 100%;
     line-height: 50px;
     text-align: center;
     font-size: 30px;
 }
 .clock_container .time {
-    font-size: 49px;
-    line-height: 88px;
+    font-size: 93px;
+    line-height: 46px;
+    width: 100%;
+    max-width: 450px;
+    align-self: stretch;
+    flex-basis: 100%;
     position: relative;
     color: rgb(100, 207, 255);
 
@@ -26,46 +37,35 @@
 .clock_container .date {
     position: relative;
     line-height: 1;
-    padding-bottom: 20px;
     color: #DB4B4B;
     font-size: 25px;
+    flex-basis: 50%;
     text-transform: uppercase;
-    /*border-left: 1px solid #01B0FF;
-    border-right: 1px solid #01B0FF;
-    border-bottom: 1px solid #01B0FF;*/
-}
-.clock_container .date:before,
-.clock_container .date::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    background-color: #000;
-    bottom: -1px;
-    left: 25%;
-    width: 50%;
 }
 .clock_container .day {
     line-height: 1;
-    padding-top: 20px;
-    /*border-left: 1px solid #01B0FF;
-    border-right: 1px solid #01B0FF;
-    border-top: 1px solid #01B0FF;*/
+    flex-basis: 50%;
     text-transform: uppercase;
     font-size: 31px;
     letter-spacing: 8px;
     position: relative;
     color: rgb(1, 176, 255)
 }
-.clock_container .day:before,
-.clock_container .day::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    background-color: #000;
-    top: -1px;
-    left: 25%;
-    width: 50%;
+
+.mainNav {
+    padding: 0 15px;
 }
+.mainNav A {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: Oswald, monospace;
+    font-weight: 700;
+    color: rgb(100, 207, 255);
+}
+.mainNav A:hover {
+    background-color: rgba(100, 207, 255, 0.2);
+}
+
 @media only screen and (max-width: 992px) {
     .clock_container {
         margin-bottom: 30px;

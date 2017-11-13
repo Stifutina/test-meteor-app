@@ -26,3 +26,6 @@ session
 okgrow:analytics
 iron:router
 d3js:d3
+accounts-ui
+accounts-google
+service-configuration

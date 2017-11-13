@@ -2,12 +2,17 @@
     <main>
 
         <div class="row">
-            <div class="col s12 m12 l12 xl6 clock_container">
+            <div class="clock_container">
                 {{>clock getClockObj}}
 
-                <a class="waves-effect waves-light btn-large amber darken-1 add_event_modal" href="/add">ADD EVENT</a>
-                <a class="waves-effect waves-light btn-large lighten-2 btn-flat btn-fly" href="/fly">FLY</a>
+                <div class="mainNav">
+                    <a href="/">MAIN PAGE</a>
+                    <a href="/login">ACCOUNT</a>
+                    <a href="/add">ADD EVENT</a>
+                    <a href="/fly">FLY</a>
+                </div>
             </div>
+
         </div>
 
         <div class="row">

@@ -1,13 +1,11 @@
 <template name="clock">
-    <a href="/">
     {{#with getClockObj}}
-        <div class="day">{{dayName}}</div>
         <div class="time">
             <span>{{hours}}</span> : <span>{{minutes}}</span> : <span>{{seconds}}</span>
         </div>
+        <div class="day">{{dayName}}</div>
         <div class="date">
             <span>{{day}}</span> <span>{{month}}</span>, <span>{{year}}</span>
         </div>
     {{/with}}
-    </a>
 </template>

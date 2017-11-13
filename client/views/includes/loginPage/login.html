@@ -1,0 +1,13 @@
+<template name="login">
+    <div class="userAccountData">
+        {{#if currentUser}}
+            <h1 class="pageHeader">Your Google account</h1>
+            <img src="{{currentUser.services.google.picture}}" alt="" class="userAvatar">
+            <p class="userLogin">{{currentUser.services.google.given_name}}</p>
+            <button id="logout" class="btn-large waves-effect waves-light red">Logout</button>
+        {{else}}
+            <h1 class="pageHeader">Login with Google</h1>
+            <button id="google-login" class="btn-large waves-effect waves-light blue">Log in with google</button>
+        {{/if}}
+    </div>
+</template>

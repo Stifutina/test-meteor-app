@@ -4,6 +4,10 @@
       "Google Analytics": {
         "trackingId": "UA-103427084-1"
       }
+    },
+    "OAuth": {
+      "clientId": "599732102905-0sls84at0f4uklb2eo9h2469trvdh6a4.apps.googleusercontent.com",
+      "clientSecret": "TVBaMQV9UohwgmuPTC5yojsH"
     }
   }
 }
