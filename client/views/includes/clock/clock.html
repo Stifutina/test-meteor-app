@@ -1,7 +1,17 @@
 <template name="clock">
     {{#with getClockObj}}
         <div class="time">
-            <span>{{hours}}</span> : <span>{{minutes}}</span> : <span>{{seconds}}</span>
+            {{#each hoursDigits}}
+                <span class="clockNixie" data-digit="{{this}}"></span>
+            {{/each}}
+            <span class="clockNixie__divider">:</span>
+            {{#each minutesDigits}}
+                <span class="clockNixie" data-digit="{{this}}"></span>
+            {{/each}}
+            <span class="clockNixie__divider">:</span>
+            {{#each secondsDigits}}
+                <span class="clockNixie" data-digit="{{this}}"></span>
+            {{/each}}
         </div>
         <div class="day">{{dayName}}</div>
         <div class="date">

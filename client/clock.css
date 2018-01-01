@@ -23,7 +23,8 @@
     font-size: 30px;
 }
 .clock_container .time {
-    font-size: 93px;
+    /*font-size: 93px;*/
+    font-size: 0;
     line-height: 46px;
     width: 100%;
     max-width: 450px;
@@ -65,6 +66,61 @@
 .mainNav A:hover {
     background-color: rgba(100, 207, 255, 0.2);
 }
+
+
+/* NIXIE */
+.clockNixie {
+    display: inline-block;
+    width: 45px;
+    height: 75px;
+    margin: 0 8px;
+}
+.clockNixie[data-digit] {
+    background-image: url("nixie_display/_zm1080_d1_09bdm_336x549.jpg");
+    background-size: 660px auto;
+    background-repeat: no-repeat;
+}
+.clockNixie[data-digit="0"] {
+    background-position: -3px -10px;
+}
+.clockNixie[data-digit="1"] {
+    background-position: -57px -10px;
+}
+.clockNixie[data-digit="2"] {
+    background-position: -112px -10px;
+}
+.clockNixie[data-digit="3"] {
+    background-position: -168px -10px;
+}
+.clockNixie[data-digit="4"] {
+    background-position: -224px -10px;
+}
+.clockNixie[data-digit="5"] {
+    background-position: -281px -10px;
+}
+.clockNixie[data-digit="6"] {
+    background-position: -337px -10px;
+}
+.clockNixie[data-digit="7"] {
+    background-position: -392px -10px;
+}
+.clockNixie[data-digit="8"] {
+    background-position: -446px -10px;
+}
+.clockNixie[data-digit="9"] {
+    background-position: -502px -10px;
+}
+.clockNixie__divider {
+    width: 20px;
+    height: 75px;
+    display: inline-block;
+    vertical-align: top;
+    background-image: url("nixie_display/_zm1080_d1_09bdm_336x549.jpg");
+    background-size: 660px auto;
+    background-repeat: no-repeat;
+    background-position: -581px -139px;
+}
+/* END NIXIE */
 
 @media only screen and (max-width: 992px) {
     .clock_container {

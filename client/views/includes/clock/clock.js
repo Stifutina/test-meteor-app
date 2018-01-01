@@ -23,6 +23,9 @@ Template.clock.helpers({
                 hours: momentNow.format("HH"),
                 minutes: momentNow.format("mm"),
                 seconds: momentNow.format("ss"),
+                hoursDigits: momentNow.format("HH").toString().split(''),
+                minutesDigits: momentNow.format("mm").toString().split(''),
+                secondsDigits: momentNow.format("ss").toString().split(''),
             };
         }
     }
