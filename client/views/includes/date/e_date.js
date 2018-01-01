@@ -62,7 +62,7 @@ function drawChart(id, dateStart, dateEnd) {
         const hours = allHours % 24;
         const days = parseInt(allHours / 24) % 7;
         const weeks = parseInt((allHours / 24) / 7) % 4;
-        const months = momentThen.diff(momentNow, 'months') % 12;
+        const months = parseInt(parseInt((allHours / 24) / 7) / 4) % 12;
         const years = momentThen.diff(momentNow, 'years');
 
         timeUnits = {
@@ -140,7 +140,7 @@ function drawChart(id, dateStart, dateEnd) {
         Object.keys(timeUnits).forEach((key) => {
             let progress = (timeUnits[key][0] * 100) / timeUnits[key][1];
 
-            if ((key === 'years' || key === 'months' || key === 'weeks') && timeUnits[key][0] === 0) {
+            if (timeUnits[key][0] === 0) {
                 return false
             }
 

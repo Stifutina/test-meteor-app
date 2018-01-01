@@ -12,7 +12,7 @@ Template.countersList.helpers({
                     userId: Meteor.user()._id
                 }
             }
-            return Dates.find(query, { sort: { createdAt: -1 } });
+            return Dates.find(query, { sort: { createdAt: 1 } });
         } else {
             return []
         }
